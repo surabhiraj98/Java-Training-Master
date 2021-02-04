@@ -1,0 +1,8 @@
+package com.rakuten.training.collections;
+
+
+public interface TwoStringPredicate {
+	boolean isFirstBetterThanSecond(String s1,String s2) {
+		return (SortStrings.eChecker(s1, s2) >= 0);
+	};
+}

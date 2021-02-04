@@ -1,0 +1,25 @@
+package com.rakuten.training.basics;
+
+import java.io.File;
+
+public class MyDOS {
+
+	public static void main(String[] args) {
+		String command = args[0];
+		if(command.equals("dir")) {
+			try {
+				String dirPath = args[1];
+				File directory = new File(dirPath);
+				File filesList[] = directory.listFiles();
+				System.out.println("The directory contents are : ");
+				for(File file : filesList) {
+					System.out.println("File Name : "+file.getName());
+					System.out.println("File Path : "+file.getAbsolutePath());
+					System.out.println("File Size : "+file.getTotalSpace());
+				}
+			}
+		}
+
+	}
+
+}

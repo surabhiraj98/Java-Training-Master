@@ -1,0 +1,14 @@
+package com.rakuten.training.ui;
+
+import com.rakuten.training.service.ProductService;
+import com.rakuten.training.service.ProductServiceImpl;
+
+public class ProductConsoleUI {
+	
+	ProductService service = new ProductServiceImpl(); 
+	
+	public void createProductWithUI() {
+		
+	}
+
+}

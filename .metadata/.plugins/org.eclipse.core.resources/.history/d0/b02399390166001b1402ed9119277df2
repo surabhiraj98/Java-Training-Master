@@ -1,0 +1,18 @@
+package com.rakuten.training;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.rakuten.training.ui.ProductConsoleUI;
+
+@SpringBootApplication
+public class ProductsappApplication {
+
+	public static void main(String[] args) {
+//		SpringApplication.run(ProductsappApplication.class, args);
+		ProductsAppConfiguration config = new ProductsAppConfiguration();
+		ProductConsoleUI ui = config.uiObj();
+		ui.createProductWithUI();
+	}
+
+}

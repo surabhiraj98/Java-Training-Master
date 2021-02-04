@@ -1,0 +1,46 @@
+package com.rakuten.training.basics;
+
+public class DOWFinder {
+	
+	public static boolean checkLeapYear(int day,int month, int year) {
+		if(year % 4 == 0) {
+			if(month <= 2) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public static int remDaysYear(int day,int month,int year) {
+		int[] month_days = {31,28,31,30,31,30,31,31,30,31,30,31};
+		int sum = day;
+		for(int i=0; i < month-1; i++)
+			sum += month_days[i];
+		return sum;
+	}
+	
+	public static int total_days(int day,int month, int year) {
+		int num_years = year - 1900;
+		int leap_years = num_years / 4;
+		int num_days = num_years * 365 + leap_years;
+		num_days += remDaysYear(day,month,year);
+		if(checkLeapYear(day,month,year))
+			num_days--;
+		return num_days;
+		
+	}
+	
+	public static String findDOW(int day,int month, int year) {
+		String[] weekday = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+		int tot_days = total_days(day,month,year);
+		int dayIdx = tot_days % 7;
+		return weekday[dayIdx];
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(findDOW(3, 1, 2021));
+		System.out.println(findDOW(3, 4, 2021));
+		System.out.println(findDOW(25, 6, 2021));
+		System.out.println(findDOW(1, 7, 2020));
+	}
+}

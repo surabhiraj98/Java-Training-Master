@@ -1,0 +1,6 @@
+package com.rakuten.training.collections;
+
+@FunctionalInterface
+public interface TwoStringPredicate {
+	public boolean isFirstBetterThanSecond(String s1,String s2);
+}

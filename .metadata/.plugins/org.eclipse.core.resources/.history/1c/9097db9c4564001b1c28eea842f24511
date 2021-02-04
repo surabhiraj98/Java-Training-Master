@@ -1,0 +1,5 @@
+package com.rakuten.training.collections;
+
+public interface TwoStringPredicate {
+	void isFirstBetterThanSecond(String s1,String s2);
+}

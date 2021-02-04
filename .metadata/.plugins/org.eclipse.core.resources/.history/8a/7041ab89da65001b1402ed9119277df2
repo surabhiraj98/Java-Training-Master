@@ -1,0 +1,36 @@
+package com.rakuten.training.dal;
+
+import java.util.List;
+import java.util.Map;
+
+import com.rakuten.training.domain.Product;
+
+public class ProductDAOInMemImpl implements ProductDAO {
+	
+	Map<Integer,Product> db;
+
+	@Override
+	public Product save(Product toBeSaved) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Product findById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Product> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteById(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

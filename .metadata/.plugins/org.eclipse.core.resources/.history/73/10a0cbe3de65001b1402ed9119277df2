@@ -1,0 +1,16 @@
+package com.rakuten.training.ui;
+
+import java.util.Scanner;
+
+import com.rakuten.training.service.ProductService;
+import com.rakuten.training.service.ProductServiceImpl;
+
+public class ProductConsoleUI {
+	
+	ProductService service = new ProductServiceImpl(); 
+	
+	public void createProductWithUI() {
+		try(Scanner sc = new Scanner(System.in))
+	}
+
+}

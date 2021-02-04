@@ -1,0 +1,8 @@
+package com.rakuten.training.collections;
+
+public class StringUtils {
+	
+	public static String betterString(String s1,String s2,TwoStringPredicate obj) {
+		return obj.isFirstBetterThanSecond(s1, s2)
+	}
+}

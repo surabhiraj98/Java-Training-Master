@@ -1,0 +1,30 @@
+package com.rakuten.training.service;
+
+import java.util.List;
+
+import com.rakuten.training.domain.Product;
+
+public class ProductServiceImpl implements ProductService {
+
+	@Override
+	public int createNewProduct(Product toBeCreated) {
+		
+	}
+
+	@Override
+	public void removeExisting(int id) {
+
+		
+	}
+
+	@Override
+	public List<Product> findAll() {
+
+	}
+
+	@Override
+	public Product findById(int id) {
+
+	}
+
+}

@@ -1,0 +1,23 @@
+package com.rakuten.training.ui;
+
+import java.util.Scanner;
+
+import com.rakuten.training.service.ProductService;
+import com.rakuten.training.service.ProductServiceImpl;
+
+public class ProductConsoleUI {
+	
+	ProductService service = new ProductServiceImpl(); 
+	
+	public void createProductWithUI() {
+		try(Scanner sc = new Scanner(System.in)){
+			System.out.print("Product Name : ");
+			String name = sc.nextLine();
+			System.out.print("Product Price : ");
+			float price = Float.parseFloat(sc.nextLine());
+			System.out.println("Product QOH : ");
+			int qoh = Integer.parseInt(sc.nextLine());
+		}
+	}
+
+}

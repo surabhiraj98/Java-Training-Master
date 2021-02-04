@@ -1,0 +1,30 @@
+package com.rakuten.training.lambdas;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Predicate;
+
+public class Matches {
+	
+	public static List<String> word = Arrays.asList(com.rakuten.training.collections.SortDemo.strings);
+	
+	public static <T> List<T> allMatches(List<T> sList, Predicate<T> matcher) {
+		List<String> outList = new ArrayList<>();
+		for(String ele : sList) {
+			if(matcher.test(ele))
+				outList.add(ele);
+		}
+		return outList;
+	}
+	
+	public static void main(String[] args) {
+		List<String> shortWords = Matches.allMatches(word, s -> s.length() < 4);
+		List<String> wordsWithB = Matches.allMatches(word, s-> s.contains("b"));
+		List<String> evenLengthWords = Matches.allMatches(word, s -> (s.length()%2==0));
+		System.out.println(shortWords);
+		System.out.println(wordsWithB);
+		System.out.println(evenLengthWords);
+	}
+	
+}

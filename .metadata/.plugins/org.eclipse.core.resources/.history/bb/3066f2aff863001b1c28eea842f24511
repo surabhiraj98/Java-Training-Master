@@ -1,0 +1,41 @@
+package com.rakuten.training.basics;
+
+import java.io.File;
+import java.nio.file.FileAlreadyExistsException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
+
+public class MyDOS {
+	
+	public static void list_dir(String dirPath) {
+		try {
+			File directory = new File(dirPath);
+			File filesList[] = directory.listFiles();
+			System.out.println("The directory contents are : ");
+			for(File file : filesList) {
+				System.out.println("File Name : "+file.getName());
+				System.out.println("File Path : "+file.getAbsolutePath());
+				System.out.println("File Size : "+file.getTotalSpace());
+				System.out.println();
+			}
+		}catch(Exception e) {
+			System.out.println(e);
+		}
+	}
+	
+	public static copy_file(String f1, String f2) {
+		Path fptr1 = new Paths.get(f1);
+		Path fptr2 = new Paths.get(f2);
+		File.copy(fptr1,fptr2,StandardCopyOption.REPLACE_EXISTING);
+	}
+
+	public static void main(String[] args) {
+		String command = args[0];
+		if(command.equals("dir")) {
+			list_dir(args[1]);
+		}
+
+	}
+
+}

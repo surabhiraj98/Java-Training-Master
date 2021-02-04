@@ -1,0 +1,26 @@
+package com.rakuten.training.lambdas;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+
+public class StreamOperations {
+	
+	public static List<String> word = Arrays.asList(com.rakuten.training.collections.SortDemo.strings);
+	
+	public static void main(String[] args) {
+		String out = word.stream().reduce("",String::concat);
+		System.out.println(out);
+		
+		String outUpper = word.stream().map(String::toUpperCase).reduce("",String::concat);
+		System.out.println(outUpper);
+		
+		String outComma = word.stream().reduce((s1,s2) -> s1+","+s2).orElse("");
+		System.out.println(outComma);
+		
+		double[] dArr = new Random().doubles(10).toArray();
+		List<Double> dList = new ArrayList<Double>(dArr);
+	}
+
+}

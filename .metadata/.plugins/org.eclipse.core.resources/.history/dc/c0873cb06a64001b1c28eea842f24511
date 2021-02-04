@@ -1,0 +1,18 @@
+package com.rakuten.training.lambdas;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Predicate;
+
+public class Matches {
+	
+	public static List<String> allMatches(List<String> sList, Predicate<String> matcher) {
+		List<String> outList = new ArrayList<>();
+		for(String ele : sList) {
+			if(matcher.test(ele))
+				outList.add(ele);
+		}
+		return outList;
+	}
+	
+}

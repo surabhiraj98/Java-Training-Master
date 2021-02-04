@@ -1,0 +1,17 @@
+package com.rakuten.training.lambdas;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class StreamDemo {
+	
+	public static List<String> word = Arrays.asList(com.rakuten.training.collections.SortDemo.strings);
+	
+	public static void main(String[] args) {
+		List<String> excitingWords = word.stream().map(s -> "  "+ s).collect(Collectors.toList()).forEach(System.out::println);
+		System.out.println(excitingWords);
+		
+	}
+
+}

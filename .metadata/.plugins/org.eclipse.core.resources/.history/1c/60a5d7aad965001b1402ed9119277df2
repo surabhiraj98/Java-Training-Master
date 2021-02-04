@@ -1,0 +1,11 @@
+package com.rakuten.training.dal;
+
+import com.rakuten.training.domain.Product;
+
+public interface ProductDAO {
+	
+	public Product save();
+	
+	
+	
+}

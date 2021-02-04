@@ -1,0 +1,23 @@
+package com.rakuten.training.lambdas;
+
+public class MathUtils {
+	  public static double[] randomArray(int size) {
+	    return(new Random().doubles(size).toArray());
+	  }
+	  
+	  /** Return the sum of the square roots of entries in the array. 
+	   */
+	  public static double sqrtSum(double[] nums) {
+	    return(DoubleStream.of(nums).map(Math::sqrt).sum());
+	  }
+	  
+	  public static double sqrtSumParallel(double[] nums) {
+	    return(DoubleStream.of(nums).parallel().map(Math::sqrt).sum());
+	  }
+
+	  // Or, use DoubleStream.generate, which produces DoubleStream
+	  // instead of Stream<Double>
+	  public static Stream<Double> randomNums(double maxValue) {
+	    return(Stream.generate(() -> Math.random() * maxValue));
+	  }
+	}

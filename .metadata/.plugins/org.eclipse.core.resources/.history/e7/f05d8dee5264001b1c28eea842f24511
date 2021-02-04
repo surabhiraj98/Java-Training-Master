@@ -1,0 +1,5 @@
+package com.rakuten.training.lambdas;
+
+public interface Java8Interface {
+
+}

@@ -1,0 +1,9 @@
+package com.rakuten.training.ui;
+
+public class ProductConsoleUI {
+	
+	public void createProductWithUI() {
+		
+	}
+
+}

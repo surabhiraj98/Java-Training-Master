@@ -1,0 +1,20 @@
+package com.bank.service;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class AccountServiceTest {
+
+	@Test
+	void createNewAccount_Must_Return_Valid_Id_When_Balance_GTEQ_MinBalance() {
+		
+//		AAA
+//		Arrange
+		AccountService objectUnderTest = new AccountService();
+//		Act
+		int accountID = objectUnderTest.createNewAccount("SA", objectUnderTest.MIN_BAL);
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.rakuten.training.lambdas;
+
+public class StringUtils {
+	
+	public static <T> T betterElement(<T> s1, <T> s2,TwoStringPredicate obj) {
+		return (obj.isFirstBetterThanSecond(s1, s2) ? s1 : s2);
+	}
+	
+	public static void main(String[] args) {
+		String better = betterString("Hi", "Hello", (s1,s2)-> s1.length() > s2.length());
+		System.out.println(better);
+	}
+}                    

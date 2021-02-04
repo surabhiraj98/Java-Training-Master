@@ -1,0 +1,59 @@
+package com.rakuten.training.collections;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class SortStrings {
+	
+	
+	public static void sortLen(List<String> list) {
+		Collections.sort(list,(s1,s2)->s1.length() - s2.length());
+	}
+	
+	public static void sortLenRev(List<String> list) {
+		Collections.sort(list,(s1,s2)->s2.length() - s1.length());
+	}
+	
+	public static void sortAlphabetically(List<String> list) {
+		Collections.sort(list,(s1,s2)->s1.compareTo(s2));
+	}
+	
+	public static int eChecker(String s1, String s2) {
+		if(s1.contains("e") && !s2.contains("e"))
+			return -1;
+		else if(!s1.contains("e") && s2.contains("e"))
+			return 1;
+		else
+			return 0;
+	}
+	
+	public static void sortPriorityChar(List<String> list,String ch) {
+		Collections.sort(list,(s1,s2) -> {
+			if(s1.contains(ch) && !s2.contains(ch))
+				return -1;
+			else if(!s1.contains(ch) && s2.contains(ch))
+				return 1;
+			else
+				return 0;
+		});
+	}
+	
+	public static void main(String[] args) {
+		List<String> sList = new ArrayList<>();
+		sList.add("Pratik");
+		sList.add("Rahul");
+		sList.add("David");
+		sList.add("Elena");
+		sList.add("Rathore");
+		sortLen(sList);
+		System.out.println(sList);
+		sortLenRev(sList);
+		System.out.println(sList);
+		sortAlphabetically(sList);
+		System.out.println(sList);
+		sortPriorityChar(sList, "e");
+		System.out.println(sList);
+	}
+
+}

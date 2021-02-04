@@ -1,0 +1,5 @@
+package com.rakuten.training.collections;
+
+public interface TwoStringPredicate {
+
+}

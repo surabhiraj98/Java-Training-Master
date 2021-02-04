@@ -1,0 +1,7 @@
+1612155402904	Move compilation units
+1612159928686	Rename local variable 's1'
+1612159956362	Rename local variable 's2'
+1612169885853	Rename local variable 'sList'
+1612265104826	Rename method 'check_leap_year'
+1612265128598	Rename method 'rem_days_year'
+1612265138836	Rename local variable 'month_days'

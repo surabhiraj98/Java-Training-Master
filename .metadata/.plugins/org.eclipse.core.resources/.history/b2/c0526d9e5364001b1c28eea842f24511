@@ -1,0 +1,6 @@
+package com.rakuten.training.lambdas;
+
+@FunctionalInterface
+public interface TwoStringPredicate {
+	public boolean <T> isFirstBetterThanSecond(<T> first,<T> second);
+}
