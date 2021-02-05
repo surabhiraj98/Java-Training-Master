@@ -1,0 +1,5 @@
+package com.rakuten.training.dal;
+
+public interface ProductRepository {
+
+}

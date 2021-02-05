@@ -1,0 +1,9 @@
+package com.rakuten.training.dal;
+
+import org.springframework.stereotype.Repository;
+
+public interface ProductRepository extends Repository {
+	
+	
+
+}

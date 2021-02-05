@@ -1,0 +1,43 @@
+package com.rakuten.training.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="review")
+public class Review {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	int id;
+	String reviewer;
+	String reviewText;
+	float rating;
+	
+	public Review() {
+	
+	}
+
+	public Review(String reviewer, String reviewText, float rating) {
+		super();
+		this.reviewer = reviewer;
+		this.reviewText = reviewText;
+		this.rating = rating;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public String getReviewer() {
+		return reviewer;
+	}
+
+}

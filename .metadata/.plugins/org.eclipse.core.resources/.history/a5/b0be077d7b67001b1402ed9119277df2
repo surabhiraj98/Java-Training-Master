@@ -1,0 +1,11 @@
+package com.rakuten.training.dal;
+
+import org.springframework.data.repository.Repository;
+
+import com.rakuten.training.domain.Product;
+
+public interface ProductRepository extends Repository<Product, Integer> {
+	
+	
+
+}
