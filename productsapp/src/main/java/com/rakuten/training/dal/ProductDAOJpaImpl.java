@@ -12,6 +12,8 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.rakuten.training.domain.Product;
+import com.rakuten.training.service.ReviewService;
+import com.rakuten.training.service.ReviewServiceImpl;
 
 @Primary
 @Repository
@@ -41,6 +43,10 @@ public class ProductDAOJpaImpl implements ProductDAO {
 
 	@Override
 	public void deleteById(int id) {
+//		Query query = em.createQuery("DELETE from Review r where r.product.id=:pid");
+//		query.setParameter("pid", id);
+//		int numReviewsDeleted = query.executeUpdate();
+//		System.out.println("<<<<< Deleted " +numReviewsDeleted + "Reviews before deleting product with id = " +id+">>>>>>");
 		Product p = em.find(Product.class, id);
 		em.remove(p);
 	}
