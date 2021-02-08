@@ -11,5 +11,9 @@ public interface ReviewService {
 	Review findById(int id);
 
 	List<Review> findByProduct_Id(int pid);
+	
+	void deleteByProduct_Id(int pid);
+
+	void deleteByReview_Id(int rid);
 
 }

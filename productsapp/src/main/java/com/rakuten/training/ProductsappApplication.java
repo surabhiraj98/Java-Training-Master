@@ -15,26 +15,26 @@ import com.rakuten.training.ui.ProductConsoleUI;
 public class ProductsappApplication {
 
 	public static void main(String[] args) {
-		ApplicationContext springContainer =
-				SpringApplication.run(ProductsappApplication.class, args);
-		
+//		ApplicationContext springContainer =
+		SpringApplication.run(ProductsappApplication.class, args);
+
 //		ProductConsoleUI ui = springContainer.getBean(ProductConsoleUI.class);
 //		ui.createProductWithUI();
-		
+
 //		testReviewAssociation(springContainer);
-		
-		testSpringDataRepository(springContainer);
+
+//		testSpringDataRepository(springContainer);
 	}
 
-	private static void testSpringDataRepository(ApplicationContext springContainer) {
-		ProductRepository repo = springContainer.getBean(ProductRepository.class);
-//		Product product = new Product("repo",10000,10);
-//		Product savedProduct = repo.save(product);
-//		System.out.println(savedProduct);
-		System.out.println(repo.findByPrice(56000f));
-		System.out.println(repo.findByPriceLessThan(1000000.00f));
-		System.out.println(repo.findByName("MacBook Pro"));
-	}
+//	private static void testSpringDataRepository(ApplicationContext springContainer) {
+//		ProductRepository repo = springContainer.getBean(ProductRepository.class);
+////		Product product = new Product("repo",10000,10);
+////		Product savedProduct = repo.save(product);
+////		System.out.println(savedProduct);
+//		System.out.println(repo.findByPrice(56000f));
+//		System.out.println(repo.findByPriceLessThan(1000000.00f));
+//		System.out.println(repo.findByName("MacBook Pro"));
+//	}
 
 //	private static void testReviewAssociation(ApplicationContext springContainer) {
 //		Review aReview = new Review("self","very good",5);

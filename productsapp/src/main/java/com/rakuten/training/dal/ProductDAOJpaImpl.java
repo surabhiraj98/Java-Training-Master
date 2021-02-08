@@ -15,7 +15,7 @@ import com.rakuten.training.domain.Product;
 
 @Primary
 @Repository
-//@Transactional
+@Transactional
 public class ProductDAOJpaImpl implements ProductDAO {
 	
 	@Autowired

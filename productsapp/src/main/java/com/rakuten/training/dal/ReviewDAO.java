@@ -12,4 +12,8 @@ public interface ReviewDAO {
 
 	List<Review> findByProduct_Id(int pid);
 
+	void deleteByProduct_Id(int pid);
+
+	void deleteByReview_Id(int rid);
+
 }

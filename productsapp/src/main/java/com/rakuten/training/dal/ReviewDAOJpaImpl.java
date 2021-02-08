@@ -32,7 +32,21 @@ public class ReviewDAOJpaImpl implements ReviewDAO {
 	@Override
 	public List<Review> findByProduct_Id(int pid) {
 		Query query = em.createQuery("select r from Review r where r.product.id=:productID");
-		query.setParameter("productId", pid);
+		query.setParameter("productID", pid);
 		return query.getResultList();
+	}
+
+	@Override
+	public void deleteByProduct_Id(int pid) {
+		Query q = em.createQuery("DELETE FROM Review r WHERE r.product.id=:productId");
+		q.setParameter("productId", pid);
+		q.executeUpdate();
+	}
+	
+	@Override
+	public void deleteByReview_Id(int rid) {
+		Query query = em.createQuery("DELETE FROM Review r where r.id=:reviewId");
+		query.setParameter("reviewId", rid);
+		query.executeUpdate();
 	}
 }

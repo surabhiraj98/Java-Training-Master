@@ -38,4 +38,24 @@ public class ReviewServiceImpl implements ReviewService {
 	public List<Review> findByProduct_Id(int pid) {
 		return reviewDAO.findByProduct_Id(pid);
 	}
+	
+	@Override
+	public void deleteByProduct_Id(int pid) {
+		if(productDAO.findById(pid)!=null) {
+			reviewDAO.deleteByProduct_Id(pid);
+		}
+		else {
+			throw new IllegalArgumentException("Product Doesn't exist");
+		}
+	}
+	
+	@Override
+	public void deleteByReview_Id(int rid) {
+		if(reviewDAO.findById(rid)!=null) {
+			reviewDAO.deleteByReview_Id(rid);
+		}
+		else {
+			throw new IllegalArgumentException("Product Doesn't exist");
+		}
+	}
 }

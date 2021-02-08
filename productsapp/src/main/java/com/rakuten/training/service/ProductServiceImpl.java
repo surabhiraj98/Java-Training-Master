@@ -2,14 +2,17 @@ package com.rakuten.training.service;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.rakuten.training.dal.ProductDAO;
 import com.rakuten.training.domain.Product;
 
 
 @Service
+@Transactional
 public class ProductServiceImpl implements ProductService {
 	
 	ProductDAO dao;// = new ProductDAOInMemImpl();
@@ -36,8 +39,8 @@ public class ProductServiceImpl implements ProductService {
 		if(existing == null) {
 			throw new IllegalArgumentException("Product with id " +id + " not found!");
 		}
-		if(existing.getPrice() * existing.getQoh() >= 100000) {
-			throw new IllegalStateException("Can't delete product when stock >= 100K");
+		if(existing.getPrice() * existing.getQoh() >= 800000) {
+			throw new IllegalStateException("Can't delete product when stock >= 500K");
 		}
 		dao.deleteById(id);
 	}
